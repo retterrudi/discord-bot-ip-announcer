@@ -19,7 +19,7 @@ async def main():
 
     client = discord.Client(intents=intents)
 
-    load_dotenv(".env")
+    load_dotenv("E:\\ip-announcer\\.env")
     bot_token = os.getenv("DISCORD_BOT_TOKEN")
     target_channel_id = int(os.getenv("TARGET_CHANNEL_ID"))
 
@@ -83,5 +83,5 @@ async def main():
 if __name__ == "__main__":
     try:
         asyncio.run(main())
-    except KeyboardInterrupt: 
-        print("Script interrupted by user. Closing connection if open")
+    except Exception as e: 
+        print(e)
